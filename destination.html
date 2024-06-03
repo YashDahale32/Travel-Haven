@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations - Travel Haven</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #2976ac;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: none;
+    }
+    .container {
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 50px;
+      
+    }
+    .destination a{
+      position: absolute;
+      top: 45%;
+      left: 40%;
+      text-decoration: none;
+      color: white;
+      font-size: 50px;
+      font-weight: 400;
+    }
+    .destination {
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 700PX;
+      height: 300PX;
+    }
+    .destination:hover {
+      transform: scale(1.1);
+    }
+    .destination img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    .destination h2 {
+      color: #333;
+    }
+    .destination p {
+      color: #666;
+      line-height: 1.6;
+    }
+    header {
+      background-image: url('background.jpg'); 
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Destinations</h1>
+  </header>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="destination.html">Destinations</a>
+    <a href="adventure.html">Adventure</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <div class="destination">
+      <img src="italy.jpg" alt="Italy">
+      <a href="inidvidual.html">ITALY</a>
+    </div>
+    <div class="destination">
+      <img src="france.jpg" alt="France">
+      <a href="FRANCE.HTML">FRANCE</a>
+    </div>
+    <div class="destination">
+      <img src="usa.jpg" alt="USA">
+      <a href="usa.html">USA</a>
+    </div>
+    <div class="destination">
+      <img src="japan.jpg" alt="Japan">
+      <a href="JAPAN.HTML">JAPAN</a>
+    </div>
+    <div class="destination">
+      <img src="korea.jpg" alt="Korea">
+      <a href="korea.html">KOREA</a>
+    </div>
+    <div class="destination">
+      <img src="iceland.jpg" alt="Iceland">
+      <a href="ICELAND.HTML">ICELAND</a>
+    </div>
+    <div class="destination">
+      <img src="nepal.jpg" alt="Nepal">
+      <a href="nepal.html">NEPAL</a>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Travel Haven. All rights reserved.</p>
+  </footer>
+</body>
+</html>

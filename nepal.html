@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .destination {
+            background-color: #fff;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            width: 800px;
+            padding: 20px;
+        }
+
+        .destination:hover {
+            transform: translateY(-5px);
+        }
+
+        .destination img {
+            width: 60%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .destination:hover img {
+            transform: scale(1.05);
+        }
+
+        .destination h2 {
+            color: #333;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .destination p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .package {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .package h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .package p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .package ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .package ul li {
+            font-size: 16px;
+            color: #888;
+        }
+
+        .agency-info {
+            font-style: italic;
+            color: #888;
+            font-size: 16px;
+        }
+
+        .agency-info p {
+            margin: 5px 0;
+        }
+
+        .agency-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .agency-info a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 30%;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 40%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div class="destination">
+    <img src="nepal.jpg" alt="Nepal">
+    <h2>Nepal</h2>
+    <p>Mustang - The Hidden Kingdom</p>
+    <p>Embark on a journey to the remote region of Mustang in Nepal. Discover ancient monasteries, rugged terrain, and unparalleled views of the Himalayas.</p>
+    <div class="package">
+        <h1>Explore Mustang, Nepal</h1>
+        <p>Discover the enchanting beauty of Mustang with our curated tour package!</p>
+        <ul>
+            <li>Duration: 7 days</li>
+            <li>Destinations: Lo Manthang, Kagbeni, Ghar Gompa</li>
+            <li>Accommodation: Authentic guesthouses</li>
+            <li>Activities: Trekking, monastery visits, cultural immersion</li>
+        </ul>
+    </div>
+    <div class="agency-info">
+        <p>Travel Agency: <strong>Wanderlust Travels</strong></p>
+        <p>Contact: <a href="tel:+91 9234567890">+1 234-567-890</a></p>
+        <p>Email: <a href="mailto:info@wanderlusttravels.com">info@wanderlusttravels.com</a></p>
+        <p>Website: <a href="https://www.makemytrip.com/">www.wanderlusttravels.com</a></p>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396764.7962250307!2d83.6037!3d28.3949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1871a3368e55%3A0x74bc84572442f6c6!2sMustang%2C%20Nepal!5e0!3m2!1sen!2sus!4v1647854207998!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+</body>
+</html>

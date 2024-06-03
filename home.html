@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Haven</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-image: url('background.jpg'); 
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #2976ac;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: none;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .main-content {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .about-section {
+      margin-top: 50px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .about-section h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .about-section p {
+      line-height: 1.6;
+      color: #666;
+    }
+    .gallery-container {
+      margin-top: 50px;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .gallery img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    .package-deals {
+      margin-top: 50px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .package-deals h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .package-deals p {
+      line-height: 1.6;
+      color: #666;
+    }
+    .package-deals .deal {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .package-deals .deal img {
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .package-deals .deal .details {
+      flex: 1;
+      padding: 0 20px;
+    }
+    .package-deals .deal .details h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .package-deals .deal .details p {
+      color: #666;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Travel Haven</h1>
+  </header>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="destination.html">Destinations</a>
+    <a href="adventure.html">Adventure</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <div class="main-content">
+      <h2>Explore the World with Us!</h2>
+      <p>Travel Haven offers you a gateway to discover stunning destinations around the globe. Start planning your next adventure with us today!</p>
+      <div class="about-section">
+        <h2>About Us</h2>
+        <p>At Travel Haven, we are passionate about creating unforgettable travel experiences for our customers. With our expertise and dedication, we strive to ensure every journey is filled with excitement, discovery, and relaxation. Whether you're seeking a tropical paradise, a cultural immersion, or an adrenaline-pumping adventure, we've got the perfect trip for you.</p>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery">
+          <img src="image1.jpg" alt="Destination 1">
+          <img src="image2.jpg" alt="Destination 2">
+          <img src="image3.jpg" alt="Destination 3">
+          <img src="image4.jpg" alt="Destination 4">
+          <img src="image5.jpg" alt="Destination 5">
+          <img src="image6.jpg" alt="Destination 6">
+          <img src="image7.jpg" alt="Destination 7">
+          <img src="image8.jpg" alt="Destination 8">
+        </div>
+      </div>
+      <div class="package-deals">
+        <h2>Exclusive Package Deals</h2>
+        <div class="deal">
+          <img src="image6.jpg" alt="Package 1">
+          <div class="details">
+            <h3>Adventure Escapes</h3>
+            <p>Explore hidden gems and thrilling experiences with our adventure packages. Starting from $999.</p>
+          </div>
+        </div>
+        <div class="deal">
+          <img src="image1.jpg" alt="Package 2">
+          <div class="details">
+            <h3>Cultural Journeys</h3>
+            <p>Immerse yourself in the rich history and traditions of diverse cultures around the world. Starting from $1299.</p>
+          </div>
+        </div>
+        <div class="deal">
+          <img src="image4.jpg" alt="Package 3">
+          <div class="details">
+            <h3>Tropical Getaways</h3>
+            <p>Escape to paradise and relax on pristine beaches. Starting from $1499.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Travel Haven. All rights reserved.</p>
+  </footer>
+  <script>
+    const gallery = document.querySelector('.gallery');
+    let index = 0;
+
+    function slideGallery() {
+      index++;
+      if (index === gallery.children.length - 3) {
+        index = 0;
+      }
+      const size = gallery.children[0].clientWidth;
+      gallery.style.transform = `translateX(${-size * index}px)`;
+    }
+
+    setInterval(slideGallery, 3000);
+  </script>
+</body>
+</html>

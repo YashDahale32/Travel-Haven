@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Haven</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    
+    .destination {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .destination:hover {
+      transform: scale(1.05);
+    }
+
+    .destination img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .destination:hover img {
+      transform: scale(1.1);
+    }
+
+    .destination .text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .destination:hover .text {
+      opacity: 1;
+    }
+
+  
+    main {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    main h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #eee7e7;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #6b6666;
+      margin-bottom: 20px;
+    }
+    header {
+  background-image: url('background1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 40%;
+      border-radius: 8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .login-form p {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 style="text-align: center;">Welcome to Travel Haven</h2>
+    <form class="login-form" id="loginForm">
+      <input type="text" id="username" placeholder="Username" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+      <p>Forgot your password? <a href="forgot_password.html">Reset here</a>.</p>
+    </form>
+  </div>  
+</div>
+<script>
+
+  window.onload = function() {
+    document.getElementById('loginModal').style.display = 'block';
+  }
+
+  document.getElementsByClassName('close')[0].onclick = function() {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('loginModal')) {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+  }
+
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if (username.trim() === '' || password.trim() === '') {
+      alert("Username and password cannot be blank!"); 
+    } else {
+      
+      alert("Login successful!"); 
+      document.getElementById('loginModal').style.display = 'none'; 
+    }
+  });
+</script>
+
+<header>
+  <div class="container">
+    <div class="logo-container">
+      <a href="home.html">
+      </a>
+    </div>
+    <h1>Travel Haven</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="adventure.html">Adventures</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+    <main>
+      <h2 style="font-family: 'Arial Black', sans-serif; color: #007bff;">Welcome to Travel Haven</h2>
+      <p>Embark on an unforgettable journey with Travel Haven! Our website is your gateway to explore some of the most remarkable destinations around the globe.</p>
+      <p>Whether you dream of wandering through the vibrant streets of Tokyo, gazing at the majestic Swiss Alps, savoring croissants in the romantic city of Paris, or experiencing the bustling energy of New York City, Travel Haven has something for every traveler.</p>
+      <p>Join us as we take you on a virtual tour of these incredible destinations, providing inspiration and information to fuel your wanderlust. Get ready to discover new cultures, cuisines, and landscapes from the comfort of your home!</p>
+
+        <h3>Featured Destinations:</h3>
+        <div class="destination">
+          <img src="tokyo.jpg" alt="Tokyo, Japan">
+          <div class="text">
+            <h4>Tokyo, Japan</h4>
+            <p>Discover the vibrant metropolis of Tokyo, where traditional culture meets modern technology.</p>
+          </div>
+        </div>
+        
+        <div class="destination">
+          <img src="switzerland.jpg" alt="Switzerland">
+          <div class="text">
+            <h4>Switzerland</h4>
+            <p>Explore the stunning landscapes of Switzerland, from the majestic Swiss Alps to picturesque lakeside villages.</p>
+          </div>
+        </div>
+      
+        <div class="destination">
+          <img src="paris.jpg" alt="Paris, France">
+          <div class="text">
+            <h4>Paris, France</h4>
+            <p>Experience the romance and charm of Paris, known for its iconic landmarks and world-class cuisine.</p>
+          </div>
+        </div>
+      
+        <div class="destination">
+          <img src="newyork.jpg" alt="New York City, USA">
+          <div class="text">
+            <h4>New York City, USA</h4>
+            <p>Discover the bustling energy of New York City, home to diverse neighborhoods, cultural attractions, and iconic skyscrapers.</p>
+          </div>
+        </div>
+        
+        <p>Ready to explore these incredible destinations? Start planning your next adventure today!</p>
+        <p>Website: <a href="https://www.makemytrip.com/">www.urbanadventures.com</a></p>
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Travel Haven</p>
+      </div>
+    </footer>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://www.twitter.com"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+  </body>
+  </html>
